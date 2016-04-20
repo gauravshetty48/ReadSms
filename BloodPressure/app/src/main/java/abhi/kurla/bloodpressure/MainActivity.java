@@ -19,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar myToolbar = (Toolbar) findViewById(R.id.my_toolbar);
         setSupportActionBar(myToolbar);
         getSupportActionBar().setTitle("BP Monitor");
+        systolicView = (TextView) findViewById(R.id.systolic_view);
+        diastolicView = (TextView) findViewById(R.id.diastolic_view);
+        heartRateView = (TextView) findViewById(R.id.heart_rate_view);
+
         Bundle extras = getIntent().getExtras();
         if(extras != null) {
             systolic = extras.getString("systolic");
@@ -29,10 +33,6 @@ public class MainActivity extends AppCompatActivity {
             diastolic = (String) savedInstanceState.getSerializable("diastolic");
             heartRate = (String) savedInstanceState.getSerializable("heart_rate");
         }
-        systolicView = (TextView) findViewById(R.id.systolic_view);
-        diastolicView = (TextView) findViewById(R.id.diastolic_view);
-        heartRateView = (TextView) findViewById(R.id.heart_rate_view);
-
         systolicView.setText(systolic);
         diastolicView.setText(diastolic);
         heartRateView.setText(heartRate);
