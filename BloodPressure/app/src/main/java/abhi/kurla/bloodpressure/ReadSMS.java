@@ -16,7 +16,7 @@ import android.util.Log;
  */
 public class ReadSMS extends BroadcastReceiver {
 
-    String number = "860936";
+    String number = "4366";
     String msg_from, msgBody;
     String[] array;
 
